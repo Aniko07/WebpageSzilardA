@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapcsolat - Szilárd Anikó</title>
+    <link rel="stylesheet" href="szilardaniko.css">
+    <style>
+        body {
+        background-image: url('59\ Vadkacsák.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed; /* háttér nem scrollozik együtt */
+        }
+
+        body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.3); /* Az elhalványítás beállítása */
+        z-index: 0;
+        }
+
+        /* Az űrlap fölé kerüljön */
+        form {
+        position: relative;
+        z-index: 1;
+        }
+
+        .keret {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .form-info {
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            font-style: oblique;
+            color: rgb(67, 20, 4);
+        }
+
+        .form-group {
+        display: flex;
+       /*  align-items: center; */
+        margin-bottom: 5px;
+    }
+
+    .form-group label {
+        width: 75px;
+       /*  margin-right: 0px; */
+        text-align: left;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        border-radius: 4px;
+        font-weight: bold;
+        font-style: oblique;
+        color: rgb(67, 20, 4);
+    }
+
+    .form-group input {
+        flex: 1;
+        padding: 6px;
+        font-size: 0.9rem;
+        border:1px solid #ccc;
+        border-radius: 4px;
+    }
+
+
+    .form-group textarea {
+    flex: 1;
+    padding: 6px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    }
+
+
+    .form-buttons {
+      margin-left: 110px;
+    }
+
+    .form-buttons input {
+      padding: 4px 16px;
+      font-size: 0.9rem;
+      margin-right: 10px;
+      font-weight: bold;
+      font-style: oblique;
+      color: rgb(67, 20, 4);
+      background-color: #f5f5f5;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      box-shadow: 8px 8px 15px rgba(9, 3, 0, 0.2);
+      transition: box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .form-buttons input:hover {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 500px) {
+      .form-group {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .form-group label,
+      .form-group.textarea-group p,
+      .form-group.textarea-group textarea,
+      .form-buttons {
+        margin-left: 0;
+        width: 100%;
+        text-align: left;
+      }
+
+      .form-group.textarea-group textarea {
+        width: 100%;
+      }
+    }
+
+    </style>
+</head>
+<body>
+      <div class="hero-section">
+     <nav class="navbar">  
+
+            <div class="brand-name">SZILÁRD ANIKÓ</div>
+           
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="elerhetofestmenyek.html">Elérhető<br>festmények</a></li>
+                <li><a href="portfolio.html">Portfólió</a></li>
+                <li><a href="vasznak.html">Rendelhető<br>vásznak</a></li>
+                <li><a href="rolam.html">Rólam</a></li>
+                <li><a href="kapcsolat.html" class="active-link">Kapcsolat</a></li>
+            </ul>
+    </nav>
+        <div class="keret">
+            <form action="kapcsolat.html"> <!-- Itt változtatni kell a saját gmail címre -->
+                <h5 class="form-info">Az űrlap kitöltése után, rövid időn belül, felveszem Önnel/Veled a kapcsolatot.</h5>
+                <br>
+
+                <div class="form-group">
+                    <label for="nev">Név:*</label>
+                    <input type="text" name="nev" id="nev" required>
+                </div>
+                    
+                <div class="form-group">
+                    <label for="mail">E-mail:*</label>
+                    <input type="email" name="mail" id="mail" required>
+                </div>
+                 
+                <div class="form-group">
+                    <label for="targy">Tárgy:</label>
+                    <input type="text" name="targy" id="targy">
+                </div>    
+                     
+                 <div class="form-group">
+                    <label for="uzenet">Üzenet:*</label>
+                    <textarea name="uzenet" id="uzenet" rows="6" required></textarea>
+                </div>   
+
+                <div class="form-buttons">
+                <input type="submit" value="Küldés">
+                <input type="reset"  value="Törlés"> 
+                </div>    
+            </form>
+
+        </div>
+
+    </div>
+    <script src="szilardaniko.js"></script>
+</body>
+</html>
