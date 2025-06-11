@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rólam - Szilárd Anikó</title>
+    <style>
+
+    body {
+    background-color: beige;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+   /*  flex: 0 0 5%; */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1rem 2rem/* 10px 20px */;
+    background-color: rgb(235, 178, 121);
+    box-shadow: 0 2px 5px rgba(223, 137, 25, 0);
+    position: relative;
+   /*  padding: 1rem 2rem; */
+    z-index: 10;
+}
+
+.brand-name {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: oblique;
+    color: rgb(67, 20, 4);
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+   /*  text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: rgb(67, 20, 4);
+    display: inline-block;
+    text-align: left;
+    line-height: 1.4;
+    padding: 5px 5px;
+    border-radius: 5px; */
+   
+display: inline-block;
+    width: 100%;                    
+    height: 37px;                   
+    padding: 4px 4px;              
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgb(67, 20, 4);
+    text-align: left;
+    line-height: 1.1;             
+    border-radius: 5px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-decoration: none;
+    white-space: normal;
+
+}
+
+.nav-links li a:hover {
+    background-color: black;
+    color:  rgb(235, 178, 121);
+    transition: all 0.3s ease;
+}
+
+
+.nav-links li a.active-link {
+    background-color: black;
+    color: rgb(235, 178, 121);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+  /*   z-index: 2; */
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(67, 20, 4);
+    margin: 3px 0;
+}
+
+/* Reszponzív burger menü */
+@media (max-width: 680px){  
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color:  rgb(235, 178, 121);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(223, 137, 25, 0);
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+    </style>
+</head>
+<body>
+     <div class="hero-section">
+     <nav class="navbar">  
+
+            <div class="brand-name">SZILÁRD ANIKÓ</div>
+           
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="elerhetofestmenyek.html">Elérhető<br>festmények</a></li>
+                <li><a href="portfolio.html">Portfólió</a></li>
+                <li><a href="vasznak.html">Rendelhető<br>vásznak</a></li>
+                <li><a href="rolam.html" class="active-link">Rólam</a></li>
+                <li><a href="kapcsolat.html" >Kapcsolat</a></li>
+            </ul>
+     </nav>
+     </div>
+
+     <div style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+     <h3>Rólam</h3>
+     <p style="text-align: justify;">A festészet egyfajta csendes párbeszéd a világgal, ahol a színek, formák és a fények mesélnek.</p>
+
+<p style="text-align: justify;">Az évek során számos művésztáborban volt lehetőségem tanulni és fejlődni, ahol az alkotás öröme és a közösség inspiráló ereje formálta a látásmódomat. Ezek a tapasztalatok máig elkísérnek, és visszaköszönnek minden ecsetvonásomban.</p>
+
+<p style="text-align: justify;">Olajfestékkel dolgozom, mert ez az anyag lehetővé teszi számomra, hogy a képek rétegenként épüljenek fel akárcsak az emlékek vagy az érzések. Festményeim elsősorban vidám hangulatot tükröznek: célom, hogy örömöt és derűt vigyenek a mindennapokba, akár egy napsütéses reggel vagy egy kedves emlék.</p>
+
+<p style="text-align: justify;">A természet, a fények játéka és a belső világom harmóniája vezeti a kezem abban bízva, hogy képeim nemcsak láthatóak, hanem átélhetőek is. Több kiállításon volt már szerencsém bemutatkozni, ezek az alkalmak mindig megerősítettek abban, hogy a festészet hidat épít művész és néző között.</p>
+
+<p style="text-align: justify;">Ha valamelyik alkotásom megszólít, vagy saját elképzelésed van, örömmel veszem a megkeresésedet.</p>
+
+</div>
+<script src="szilardaniko.js"></script>
+</body>
+</html>
